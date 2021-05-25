@@ -1,0 +1,52 @@
+.form {
+    margin: 1rem 0;
+    height: 19rem;
+    overflow: auto;
+}
+
+.form-control {
+    margin: 1rem;
+}
+.form-control p {
+    color: rgb(199, 61, 61);
+}
+
+.form-control input,
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 80%
+}
+
+.form-control label {
+    font-weight: bold;
+    margin: .5rem 0
+}
+
+.form-control input:focus {
+    border-color: #2d0e74;
+    background-color: #e0d4fd;
+}
+
+.invalid input {
+    border: 1px solid #b40e0e;
+    background-color: lightpink;
+}
+
+.invalid input:focus {
+    background-color: #fbe8d2;
+}
+
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+  background-color: #ccc;
+  color: #292929;
+  border-color: #ccc;
+  cursor: not-allowed;
+}

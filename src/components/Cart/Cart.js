@@ -3,6 +3,7 @@ import classes from './Cart.module.css';
 import Modal from '../UI/Modal/Modal';
 import CartContext from '../../store/cart-context';
 import CartItem from './CartItem';
+import OrderForm from './OrderForm/OrderForm';
 
 const Cart = (props) => {
     const cartCtx = useContext(CartContext);
@@ -42,10 +43,14 @@ const Cart = (props) => {
                 <span>Total Amount</span>
                 <span>{totalAmount}</span>
             </div>
-            <div className={classes.actions}>
-                <button className={classes['button--alt']} onClick={props.onClosed}>Close</button>
-                {hasItems && <button className={classes.button}>Order</button>}
-            </div>
+            <OrderForm
+                classes={classes.actions}
+                btnClasses={classes.button}
+                btnCnlClasses={classes['button--alt']}
+                onClosed={props.onClosed}
+                hasItems={hasItems}
+                order={cartCtx.items}
+            />
         </Modal>
     )
 }
